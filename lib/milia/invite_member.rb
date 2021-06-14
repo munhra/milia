@@ -23,7 +23,7 @@ module Milia
     p = {}
     p[:password] = params[:password]
     p[:password_confirmation] = params[:password_confirmation]
-    update_attributes(p)
+    update(p)
   end
 
 # ------------------------------------------------------------------------
