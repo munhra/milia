@@ -20,9 +20,12 @@ module Milia
 # new function to set the password without knowing the current password
 # ------------------------------------------------------------------------
   def attempt_set_password(params)
+    puts ">>>>>> attempt_set_password -> #{params}"
     p = {}
-    p[:password] = params[:password]
-    p[:password_confirmation] = params[:password_confirmation]
+    p[:password] = params[:user][:password]
+    puts ">>>>>> password -> #{p[:password]}"
+    p[:password_confirmation] = params[:user][:password_confirmation]
+    puts ">>>>>> password_confirmation -> #{p[:password_confirmation]}"
     update(p)
   end
 
