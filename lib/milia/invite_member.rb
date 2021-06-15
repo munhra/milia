@@ -22,10 +22,10 @@ module Milia
   def attempt_set_password(params)
     puts ">>>>>> attempt_set_password -> #{params}"
     p = {}
-    puts ">>>>>> password -> #{p[:password]}"
     p[:password] = params[:password]
-    puts ">>>>>> password_confirmation -> #{p[:password_confirmation]}"
+    puts ">>>>>> password -> #{p[:password]}"
     p[:password_confirmation] = params[:password_confirmation]
+    puts ">>>>>> password_confirmation -> #{p[:password_confirmation]}"
     update(p)
   end
 
