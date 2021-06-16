@@ -28,6 +28,7 @@ module Milia
     puts ">>>>>> password_confirmation -> #{p[:password_confirmation]}"
     update_result = update(p)
     puts ">>>>>> password_confirmation -> #{update_result}"
+    puts ">>>>>> errors -> #{p.errors}"
     update_result
   end
 
